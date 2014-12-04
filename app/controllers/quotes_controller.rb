@@ -1,13 +1,15 @@
 class QuotesController < ApplicationController
 
     def index
-		@quotes = Quote.find(:all)
-   	end
-
+      @quotes = Quotes.find(:all) rescue nil
+      # my_record = Record.find(params[:id) 
+	end
+   	
    	def show
-      @quote = Quote.find(params[:id])
+      @quote = Quote.find(params[:id])rescue nil
    	end
    	
+
    	def new
       @quote = Quote.new
    	end

@@ -1,3 +1,38 @@
 <!-- Should display random quote later -->
 
-<h1> Cookie </h1>
+<h1> Quotes </h1>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Quote</th>
+      <th>Author</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td><%= quote.quote %></td>
+        <td><%= quote.author %></td>
+        <td><%= quote.image %></td>
+     
+
+        <td><%= button_to 'Show', quote, :method => :get %></td>
+        <td><%= button_to 'Edit', edit_quote_path(quote), :method => :get %></td>
+        <td><%= button_to 'Delete', quote, :method => :get , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+<% end %>
