@@ -5,7 +5,7 @@ class QuotesController < ApplicationController
   end
    	
    	def show
-      @quote = Quote.find(params[:id])rescue nil
+      @quote = Quote.find(params[:id])
    	end
    	
 
@@ -32,13 +32,12 @@ class QuotesController < ApplicationController
 
    def update
       @quote = Quote.find(params[:id])
-      if @quote.update_attributes(params[:quote])
-         redirect_to :action => 'show', :id => @quote
-      else
-         @quotes = Quote.find(:all)
-         render :action => 'edit'
-      end
-   end
+		if @quote.update(quote_params)
+			redirect_to quotes_path
+		else
+			render 'edit'
+		end
+	end
 
    def delete
       @quote = Quote.find(params[:id])

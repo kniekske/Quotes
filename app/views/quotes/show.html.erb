@@ -1,22 +1,29 @@
 
 
 <h2>Quote</h2>
- 
- 
-
+  <%= @quote.id %>
 
 <p>
   <strong>Quote:</strong>
-  <%= @quote %>
+  <%= @quote.quote %>
 </p>
 
 <p>
-  <strong>Author:</strong>
-  <%= @author %>
+  <strong>Autor:</strong>
+  <%= @quote.author %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= @quote.image %>
+</p>
 
 
 
    	 
-   	 <%= link_to 'Back', quotes_path %>
+ <%= link_to 'Back', quotes_path %>
+
+
+
+
+
