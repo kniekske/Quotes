@@ -1,0 +1,43 @@
+<%= form_for [@quote], :html => {:multipart => true} do |f| %>
+  <% if @quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% @quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group">
+  
+
+
+
+<div class="field">
+	<b>  <%= f.label :quote %><br></b>
+	<%= f.text_area :quote %>
+</div>
+<div class="field">
+	<b> <%= f.label :author %><br> </b>
+	<%= f.text_field :author %>
+</div>
+<div class="field">
+	<b> <%= f.label :image %><br></b>
+	<%= f.text_area :image %>
+</div>
+
+    </div>
+
+  
+  
+
+  <div class="actions">
+    <%= f.submit %><br>
+  </div>
+</form>
+<br>
+<% end %>
