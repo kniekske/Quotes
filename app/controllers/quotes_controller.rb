@@ -1,9 +1,8 @@
 class QuotesController < ApplicationController
 
     def index
-      @quotes = Quotes.find(:all) rescue nil
-      # my_record = Record.find(params[:id) 
-	end
+      @quotes = Quote.all
+  end
    	
    	def show
       @quote = Quote.find(params[:id])rescue nil
