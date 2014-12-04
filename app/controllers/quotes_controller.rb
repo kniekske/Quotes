@@ -50,7 +50,7 @@ class QuotesController < ApplicationController
 		@quote = Quote.find(params[:id])
     	@quote.destroy
     	respond_to do |format|
-     		format.html { redirect_to expenses_url, notice: 'Quote was successfully destroyed.' }
+     		format.html { redirect_to quotes_url, notice: 'Quote was successfully destroyed.' }
       		format.json { head :no_content }
     	end
  	end
