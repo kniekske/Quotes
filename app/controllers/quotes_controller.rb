@@ -21,8 +21,6 @@ class QuotesController < ApplicationController
    	end
    
    	def create
-
-
     @quote = Quote.new(quote_params)   
       # @quote = Quote.new(params[:quote])
       if @quote.save

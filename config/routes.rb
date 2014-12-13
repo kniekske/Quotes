@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+  get "users/sign_out"
   resources :quotes
+
+  post "/quotes/new"
 
     root to: "quotes#random"
 
