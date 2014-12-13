@@ -2,14 +2,15 @@ class QuotesController < ApplicationController
 
     def index
       @quotes = Quote.all
+    
     end
    	
    	def show
-      @quote = Quote.find(params[:id])
+      @quote = Quote.order("RANDOM()").first
    	end
 
     def random
-      @quote = Quote.order("RAND()").first
+      @quote = Quote.order("RANDOM()").first
     end
 
    	
