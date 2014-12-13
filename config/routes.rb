@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
-  get "users/sign_out"
+
+  resources :users
   resources :quotes
 
+
+  
   post "/quotes/new"
 
     root to: "quotes#random"
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
