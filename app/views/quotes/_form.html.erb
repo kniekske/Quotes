@@ -11,34 +11,29 @@
     </div>
   <% end %>
 
-
+<form>
   <div class="form-group">
-  
 
+  <div class="field">
+    <b> <%= f.label :quote %><br></b>
+        <%= f.text_area :quote %>
+  </div>
 
+  <div class="field">
+    <b> <%= f.label :author %><br> </b>
+        <%= f.text_field :author %>
+  </div>
 
-<div class="field">
-	<b>  <%= f.label :quote %><br></b>
-	<%= f.text_area :quote %>
-</div>
-<div class="field">
-	<b> <%= f.label :author %><br> </b>
-	<%= f.text_field :author %>
-</div>
 <!-- <div class="field">
 	<b> <%= f.label :image %><br></b>
 	<%= f.text_area :image %>
 </div> -->
 
-    </div>
-
-  
-  
+  </div>
 
   <div class="actions">
-    <%= f.submit %><br>
+    <%= f.submit %><br> </b>
   </div>
-</form>
-<br>
+
 <% end %>
 
